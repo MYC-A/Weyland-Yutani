@@ -1,4 +1,4 @@
-package com.weyland.synthetic_core_starter.core;
+package com.weyland.synthetic_core_starter.core.config;
 
 import jakarta.validation.constraints.Min;
 import lombok.Data;
@@ -12,7 +12,7 @@ import org.springframework.validation.annotation.Validated;
 @Validated //Зачем
 public class ThreadPoolConfigProperties {
 
-    @Min(value = 1, message = "corePoolSize должен быть больше 0") // Куда и как выводится
+    @Min(value = 1, message = "corePoolSize должен быть больше 0")
     private int corePoolSize =2;
 
     @Min(value = 1, message = "maxPoolSize должен быть больше 0")

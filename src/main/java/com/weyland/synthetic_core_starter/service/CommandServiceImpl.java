@@ -1,17 +1,13 @@
 package com.weyland.synthetic_core_starter.service;
 
 import com.weyland.synthetic_core_starter.DTO.CommandDTO;
-import com.weyland.synthetic_core_starter.core.ThreadPoolConfigProperties;
+import com.weyland.synthetic_core_starter.core.config.ThreadPoolConfigProperties;
+import com.weyland.synthetic_core_starter.core.exception.CommandServiceException;
 import io.micrometer.core.instrument.MeterRegistry;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
@@ -51,6 +47,8 @@ public class CommandServiceImpl implements CommandService{
         }
         catch (Exception e){
             log.error("Ошибка при добавлении задачи: {}", command, e);
+            throw new CommandServiceException("Ошибка при обработке задач", e);
+
         }
     }
 
