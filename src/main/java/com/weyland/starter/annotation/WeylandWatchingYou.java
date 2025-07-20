@@ -1,4 +1,4 @@
-package com.weyland.synthetic_core_starter.annotation;
+package com.weyland.starter.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

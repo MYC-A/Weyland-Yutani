@@ -1,8 +1,8 @@
-package com.weyland.synthetic_core_starter.annotation.aspect;
+package com.weyland.starter.annotation.aspect;
 
 
-import com.weyland.synthetic_core_starter.annotation.WeylandWatchingYou;
-import com.weyland.synthetic_core_starter.service.AuditService;
+import com.weyland.starter.annotation.WeylandWatchingYou;
+import com.weyland.starter.service.AuditService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;

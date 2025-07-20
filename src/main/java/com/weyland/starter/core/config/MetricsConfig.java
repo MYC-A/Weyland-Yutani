@@ -1,6 +1,6 @@
-package com.weyland.synthetic_core_starter.core.config;
+package com.weyland.starter.core.config;
 
-import com.weyland.synthetic_core_starter.service.CommandService;
+import com.weyland.starter.service.CommandService;
 import io.micrometer.core.instrument.Gauge;
 import io.micrometer.core.instrument.MeterRegistry;
 import jakarta.annotation.PostConstruct;

@@ -1,4 +1,4 @@
-package com.weyland.synthetic_core_starter.core.exception;
+package com.weyland.starter.core.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

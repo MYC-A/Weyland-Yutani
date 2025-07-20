@@ -1,4 +1,4 @@
-package com.weyland.synthetic_core_starter.DTO;
+package com.weyland.starter.DTO;
 
 public enum Priority {
     COMMON,

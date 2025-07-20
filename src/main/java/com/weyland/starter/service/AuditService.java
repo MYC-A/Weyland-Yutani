@@ -1,6 +1,6 @@
-package com.weyland.synthetic_core_starter.service;
+package com.weyland.starter.service;
 
-import com.weyland.synthetic_core_starter.annotation.WeylandWatchingYou;
+import com.weyland.starter.annotation.WeylandWatchingYou;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,7 +16,7 @@ public class AuditService {
 
     private final KafkaTemplate<String, String> kafkaTemplate;
     @Value("${synthetic.audit-topic:audit-topic}")
-    private final String auditTopic;
+    private String auditTopic;
 
     public void audit(WeylandWatchingYou.AuditMode mode, String method, Object[] args, Object result, Throwable error) {
         String message = buildMessage(method, args, result, error);

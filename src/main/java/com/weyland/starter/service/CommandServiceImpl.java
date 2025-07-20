@@ -1,8 +1,8 @@
-package com.weyland.synthetic_core_starter.service;
+package com.weyland.starter.service;
 
-import com.weyland.synthetic_core_starter.DTO.CommandDTO;
-import com.weyland.synthetic_core_starter.core.config.ThreadPoolConfigProperties;
-import com.weyland.synthetic_core_starter.core.exception.CommandServiceException;
+import com.weyland.starter.DTO.CommandDTO;
+import com.weyland.starter.core.config.ThreadPoolConfigProperties;
+import com.weyland.starter.core.exception.CommandServiceException;
 import io.micrometer.core.instrument.MeterRegistry;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -18,13 +18,11 @@ public class CommandServiceImpl implements CommandService{
 
     private final MeterRegistry meterRegistry;
 
-    public CommandServiceImpl(ThreadPoolExecutor executor, MeterRegistry meterRegistry) {
-        this.executor = executor;
-        this.meterRegistry = meterRegistry;
-    }
 
-    private ThreadPoolExecutor createExecutor(ThreadPoolConfigProperties config){
-        return new ThreadPoolExecutor(
+
+    public CommandServiceImpl(MeterRegistry meterRegistry, ThreadPoolConfigProperties config) {
+        this.meterRegistry = meterRegistry;
+        this.executor = new ThreadPoolExecutor(
                 config.getCorePoolSize(),
                 config.getMaxPoolSize(),
                 config.getKeepAliveTime(),

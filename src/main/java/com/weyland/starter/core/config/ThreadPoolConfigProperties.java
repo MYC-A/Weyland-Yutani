@@ -1,4 +1,4 @@
-package com.weyland.synthetic_core_starter.core.config;
+package com.weyland.starter.core.config;
 
 import jakarta.validation.constraints.Min;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.weyland.synthetic_core_starter.DTO;
+package com.weyland.starter.DTO;
 
 
 import jakarta.validation.constraints.NotBlank;
