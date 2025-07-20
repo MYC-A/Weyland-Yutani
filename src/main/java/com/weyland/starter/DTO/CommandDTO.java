@@ -3,6 +3,7 @@ package com.weyland.starter.DTO;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,5 +26,6 @@ public class CommandDTO {
     private String author;
 
     @NotBlank(message = "Нужно указать время")
+    @Pattern(regexp = "\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}", message = "Время должно быть в формате yyyy-MM-dd'T'HH:mm:ss")
     private String time;
 }
