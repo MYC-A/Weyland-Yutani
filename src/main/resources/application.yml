@@ -1,0 +1,18 @@
+synthetic:
+  audit-topic: audit-topic
+threadpool:
+  core-pool-size: 4
+  max-pool-size: 8
+  keep-alive-time: 30
+  queue-capacity: 20
+spring:
+  kafka:
+    ootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:29092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+management:
+  endpoints:
+    web:
+      exposure:
+        include: metrics
