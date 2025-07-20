@@ -1,6 +1,4 @@
 # Weyland-Yutani: Объединённый проект
-# Weyland-Yutani: Weather Kafka Application
-
 **Weyland-Yutani** — это объединённый проект, объединяющий два модуля: `synthetic-core-starter` (библиотека для работы с Kafka и AOP) и `bishop-prototype` (приложение для генерации и анализа данных о погоде с использованием Apache Kafka). Проект демонстрирует интеграцию Spring Boot с Kafka для обработки задач через REST API и событийный поток, с мониторингом через Actuator и Micrometer.
 
 ## Структура проекта
